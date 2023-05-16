@@ -1,0 +1,199 @@
+.status-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 990px;
+    margin: 32px auto;
+}
+
+@media screen and (max-width: 660px) {
+    .status-form {
+        max-width: 375px;
+    }
+}
+
+@media screen and (min-width: 660px) and (max-width: 990px) {
+    .status-form {
+        max-width: 660px;
+    }
+}
+
+.status-form h1 {
+    font-size: 30px;
+    line-height: 34px;
+    color: #666666;
+}
+
+.status-form b {
+    color: #000000;
+}
+
+.status-form hr {
+    border: 1px solid #E5E4E4;
+    margin: 23px 0px 16px 0px;
+}
+
+.status-form__header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 660px) {
+    .status-form__header  {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+.status-form__status-box {
+    position: relative;
+    word-break: break-all;
+    padding: 10px 12px;
+    margin: 11px 18px 16px 10px;
+    max-width: 503px;
+    min-height: 46px;
+    background: #EAEAEA;
+    font-size: 14px;
+    line-height: 22px;
+    color: #404040;
+}
+
+@media screen and (min-width: 660px) {
+    .status-form__status-box {
+        margin-left: 234px;
+    }
+}
+
+.status-form__status-box::before,
+.status-form__status-box::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 8px;
+    border: 7px solid transparent;
+    border-bottom-color: #EAEAEA;
+}
+
+.status-form__field {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: 16px 0px 0px 10px;
+}
+
+.status-form__input-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 336px;
+    height: 55px;
+    margin: 0px 18px 0px 0px;
+}
+
+.status-form input[type='text'],
+.status-form input[type='password'] {
+    width: 100%;
+    height: 31px;
+    border: 1px solid #999999;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+    .status-form input[type='checkbox'] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 12px;
+        height: 12px;
+        margin: 0px 10px 0px 0px;
+        border: 1px solid #7E7E7E;
+        color: #000000;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+    }
+
+    .status-form input[type='checkbox']:checked:after {
+        content: '';
+        position: absolute;
+        height: 60%;
+        width: 30%;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        -webkit-transform: translateY(-22%) rotate(45deg);
+        transform: translateY(-22%) rotate(45deg);
+        border-right: 2px solid #037BB8;
+        border-bottom: 2px solid #037BB8;
+    }
+}
+
+.status-form__input-text {
+    min-width: 224px;
+    font-size: 21px;
+    line-height: 19px;
+    color: #000000;
+}
+
+@media screen and (max-width: 660px) {
+    .status-form__input-text {
+        margin: 0px 10px 8px 0px;
+        min-width: 110px;
+    }
+}
+
+.status-form__tip {
+    width: 355px;
+    margin-right: 18px;
+    word-break: break-all;
+    font-size: 12px;
+    line-height: 20px;
+    color: #999999;
+}
+
+.status-form__label {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.status-form__error {
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FF0000;
+}
+
+.status-form__button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: 40px 0px 0px 10px;
+}
+
+@media screen and (min-width: 660px) {
+    .status-form__button-container {
+        margin-left: 234px;
+    }
+}
+
+.status-form__button {
+    border: 0px;
+    padding: 10px 15px 10px 15px;
+    margin-right: 12px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+    background: #71C838;
+    box-shadow: 0px 1px 0px #539D22;
+}
